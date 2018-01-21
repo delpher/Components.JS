@@ -12,8 +12,8 @@ No matter if it is fully server-side rendering or SPA.
     <meta charset="UTF-8">
     <title>Component Sample</title>
 
-    <script src="bower_components/jquery/dist/jquery.js"></script>
-    <script src="Content/Scripts/component-manager.js"></script>
+    <script src="libs/jquery.js"></script>
+    <script src="libs/component-manager.js"></script>
 
 </head>
 

@@ -29,10 +29,9 @@ No matter if it is fully server-side rendering or SPA.
         function SampleComponent() {
             var self = this;
 
-            self.onBind = function(element, ctx) {
+            self.onBind = function(element) {
                 self.header = element.find("[data-sample-com='header']");
                 self.content = element.find("[data-sample-com='content']");
-                ctx.preventDefaultBinding = true;
             }
 
             self.onInit = function () {

@@ -1,0 +1,25 @@
+{
+  "name": "components.js",
+  "authors": [
+    "Alexey <delph.er@hotmail.com>"
+  ],
+  "description": "Simple and lightweight library for writing component based client-side JavaScript components",
+  "main": "Content/Scripts/component-manager.js",
+  "keywords": [
+    "js",
+    "javascript",
+    "components"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.3.1"
+  }
+}

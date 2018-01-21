@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Component.JS with Knockout</title>
+
+    <script src="../bower_components/jquery/dist/jquery.js"></script>
+    <script src="../bower_components/knockout/dist/knockout.js"></script>
+
+    <script src="../Content/Scripts/component-manager.js"></script>
+    <script src="../Content/Scripts/knockout-component-binder.js"></script>
+
+</head>
+<body>
+
+<div data-component="SampleComponent">
+    <h3 data-bind="text: title"></h3>
+    <p data-bind="html: content"></p>
+</div>
+
+<script>
+    function SampleComponent() {
+        var self = this;
+
+        self.title = ko.observable("This is component header");
+        self.content = ko.observable("This is <strong>component</strong> content")
+    }
+
+    $(function() {
+        window.ComponentManager.loadComponents($(document), KnockoutComponentBinder);
+    })
+
+</script>
+
+</body>
+</html>

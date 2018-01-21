@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Component.JS with RequireJS</title>
+
+    <script src="../bower_components/requirejs/require.js"></script>
+
+</head>
+<body>
+
+<div data-component="sample.component">
+    <h3 data-sample-com="header"></h3>
+    <p data-sample-com="content"></p>
+</div>
+
+<script>
+
+    requirejs.config({
+        paths: {
+            "jquery": "../bower_components/jquery/dist/jquery",
+            "component-manager": "../Content/Scripts/component-manager"
+        }
+    });
+
+    define("sample.component", [], function() {
+        function SampleComponent() {
+            var self = this;
+
+            self.onBind = function(element) {
+                self.header = element.find("[data-sample-com='header']");
+                self.content = element.find("[data-sample-com='content']");
+            };
+
+            self.onInit = function () {
+                self.header.html('This is component header');
+                self.content.html('This is <strong>component</strong> content');
+            }
+        }
+
+        return new SampleComponent();
+    })
+
+    require(["component-manager"], function (comMgr) {
+        comMgr.loadComponents($(document));
+    })
+
+</script>
+
+</body>
+</html>

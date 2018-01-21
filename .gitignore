@@ -6,6 +6,9 @@
 .idea/**/tasks.xml
 .idea/dictionaries
 
+# Bower packages
+bower_components
+
 # Sensitive or high-churn files:
 .idea/**/dataSources/
 .idea/**/dataSources.ids
